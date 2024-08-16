@@ -26,4 +26,9 @@ document.getElementById('regBtn').addEventListener('click', function() {
         showAlertError();
         return;
         }
+
+        if (password !== repetirPassword){
+                showAlertError();
+                return;
+        }
 })
