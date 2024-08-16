@@ -6,20 +6,6 @@ function showAlertError() {
     document.getElementById("alert-danger").classList.add("show");
 }
 
-document.getElementById("regBtn").addEventListener("click", function() {
-    if (password.length < 6) {
-        showAlertError();
-        return;
-    }
-
-    const termsCheckbox = document.getElementById("terminos");
-
-    if (termsCheckbox.checked) {
-        showAlertSuccess();
-    } else {
-        showAlertError();
-    }
-});
 // Manejador de eventos para el botón "Registrarme"
 document.getElementById('regBtn').addEventListener('click', function() {
     // Obtener valores de los campos
@@ -45,4 +31,10 @@ document.getElementById('regBtn').addEventListener('click', function() {
             showAlertError();
             return;
     }
+
+    if(!terminos) {
+       showAlertError();
+        return;
+    }
+    showAlertSuccess() 
 })
