@@ -6,7 +6,6 @@ function showAlertError() {
     document.getElementById("alert-danger").classList.add("show");
 }
 
-<<<<<<< HEAD
 document.getElementById("regBtn").addEventListener("click", function() {
     if (password.length < 6) {
         showAlertError();
@@ -21,7 +20,6 @@ document.getElementById("regBtn").addEventListener("click", function() {
         showAlertError();
     }
 });
-=======
 // Manejador de eventos para el botón "Registrarme"
 document.getElementById('regBtn').addEventListener('click', function() {
     // Obtener valores de los campos
@@ -43,9 +41,8 @@ document.getElementById('regBtn').addEventListener('click', function() {
         return;
         }
 
-        if (password !== repetirPassword){
-                showAlertError();
-                return;
-        }
+    if (password !== repetirPassword){
+            showAlertError();
+            return;
+    }
 })
->>>>>>> 1be6320b90121f1cc86eaa441947ac108c739e74
