@@ -6,7 +6,17 @@ function showAlertError() {
     document.getElementById("alert-danger").classList.add("show");
 }
 
-if (password.length < 6) {
-    showAlertError();
-    return;
+document.getElementById("regBtn").addEventListener("click", function() {
+    if (password.length < 6) {
+        showAlertError();
+        return;
     }
+
+    const termsCheckbox = document.getElementById("terminos");
+
+    if (termsCheckbox.checked) {
+        showAlertSuccess();
+    } else {
+        showAlertError();
+    }
+});
