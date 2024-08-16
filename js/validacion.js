@@ -35,7 +35,17 @@ document.getElementById('regBtn').addEventListener('click', function() {
     if (nombre === '' || email === '' || password === '' || repetirPassword === '' || apellido === '') {
         showAlertError(); // Campos vacíos
         return;
+    
     }
+    
+    if (password.length < 6) {
+        showAlertError();
+        return;
+        }
 
+        if (password !== repetirPassword){
+                showAlertError();
+                return;
+        }
 })
 >>>>>>> 1be6320b90121f1cc86eaa441947ac108c739e74
