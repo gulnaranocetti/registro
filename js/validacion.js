@@ -19,6 +19,11 @@ document.getElementById('regBtn').addEventListener('click', function() {
     if (nombre === '' || email === '' || password === '' || repetirPassword === '' || apellido === '') {
         showAlertError(); // Campos vacíos
         return;
+    
     }
-
+    
+    if (password.length < 6) {
+        showAlertError();
+        return;
+        }
 })
