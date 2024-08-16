@@ -16,9 +16,4 @@ document.getElementById('regBtn').addEventListener('click', function() {
     const apellido = document.getElementById('apellido').value.trim();
     const terminos = document.getElementById('terminos').checked;
 
-    // Validaciones
-    if (nombre === '' || email === '' || password === '' || repetirPassword === '' || apellido === '') {
-        showAlertError(); // Campos vacíos
-        return;
-    }
 })
