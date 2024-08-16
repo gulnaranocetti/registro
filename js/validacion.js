@@ -5,3 +5,17 @@ function showAlertSuccess() {
 function showAlertError() {
     document.getElementById("alert-danger").classList.add("show");
 }
+
+document.getElementById("regBtn").addEventListener("click", function() {
+    
+    const termsCheckbox = document.getElementById("terminos");
+    
+    
+    if (termsCheckbox.checked) {
+        showAlertSuccess ();
+    } else {
+        showAlertError ();
+    }
+    
+    
+    });
