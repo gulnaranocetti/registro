@@ -8,6 +8,10 @@ function showAlertError() {
 
 // Manejador de eventos para el botón "Registrarme"
 document.getElementById('regBtn').addEventListener('click', function() {
+    // Ocultar las alertas previas antes de la validación
+    document.getElementById("alert-success").classList.remove("show");
+    document.getElementById("alert-danger").classList.remove("show");
+    
     // Obtener valores de los campos
     const nombre = document.getElementById('nombre').value.trim();
     const email = document.getElementById('email').value.trim();
@@ -27,8 +31,15 @@ document.getElementById('regBtn').addEventListener('click', function() {
         return;
         }
 
-        if (password !== repetirPassword){
-                showAlertError();
-                return;
-        }
+    if (password !== repetirPassword){
+            showAlertError();
+            return;
+    }
+
+    if(!terminos) {
+       showAlertError();
+        return;
+    }
+    showAlertSuccess() 
 })
+>>>>>>> 7c3fdcd11b9263cc64c2b50f4a51e9ebd80f5df7
