@@ -31,14 +31,14 @@ document.getElementById('regBtn').addEventListener('click', function() {
         return;
         }
 
-        if (password !== repetirPassword){
-                showAlertError();
-                return;
-        }
-        
-        if(!terminos) {
-           showAlertError();
+    if (password !== repetirPassword){
+            showAlertError();
             return;
-        }
-        showAlertSuccess() 
+    }
+
+    if(!terminos) {
+       showAlertError();
+        return;
+    }
+    showAlertSuccess() 
 })
